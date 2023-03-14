@@ -14,6 +14,7 @@ On trouvera une présentation graphique sous forme de diagramme avec comme axe h
 
 ## Technos et outils utilisés
 
+- docker
 - php 
 - codeIgniter (framework php)
 - SQL & phpMyAdmin
