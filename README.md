@@ -1,63 +1,19 @@
-# CodeIgniter 4 Application Starter
+# Neoness
 
-## What is CodeIgniter?
+Neoness est un exercice inventé dans le but, ici, d'apprendre à utiliser CodeIgniter lors de ma formation chez Beweb à Montpellier.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+## Présentation du projet
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Votre nouveau client NeoNess (salle de sport) vous demande de lui proposer une mini-application permettant de suivre l'évolution de chaque inscrit au club.
+Le site web se décline en 3 pages incluant les fonctionnalités suivantes :
+- page d'accueil: permet d'enregistrer un nouvel utilisateur et/ou d'entrer les références de celui-ci. Pour une première inscription, l'utilisateur doit entrer certaines informations (nom, prénom, tel, âge, poids, taille, objectif de poids) et son mot de passe. On pourra calculer ainsi l'IMC de chaque individu à chaque instant. L'utilisateur inscrit peut, suite à la saisie correcte de ses indentifiants, accéder à sa page individuelle de suivi, même si sa connexion précédente a été interrompue. (cookies+session)
+- page personnelle: permet de préciser l'activité du jour et la restitution sous forme tabulaire (ou graphique) de l'évolution de son activité. L'utilisateur précise à partir d'un formulaire l'activité et le temps de pratique, et on proposera sous forme de tableau dynamique (modifiable) une visualisation de l'activité journalière. Une fois ce tableau finalisé, l'utilisateur pourra valider son activité en postant les informations de ce tableau. Tout est stocké en base de données pour présenter le récapitulatif global de l'activité sur une période plus importante. (1semaine / 1mois)
+On peut également inclure une projection de l'IMC pour proposer à l'utilisateur une activité en fonction de ses objectifs si ils ne sont pas remplis.
+On trouvera une présentation graphique sous forme de diagramme avec comme axe horizontal le temps et en axe vertical l'indice IMC.
+- page d'administration (back-office): L'administrateur a un compte déjà enregistré et unique, permettant d'afficher l'ensemble des données des utilisateurs (sous forme de tableau/liste), et de modifier les informations individuellement.
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+## Technos et outils utilisés
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
-
-## Installation & updates
-
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
-
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
-
-## Setup
-
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+- php 
+- codeIgniter (framework php)
+- SQL & phpMyAdmin
